@@ -1,0 +1,6 @@
+fullnameOverride: cluster-autoscaler
+
+extraArgs:
+  skip-nodes-with-local-storage: "false"
+  skip-nodes-with-system-pods: "false"
+  scan-interval: "30s"
