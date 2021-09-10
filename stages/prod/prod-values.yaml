@@ -1,0 +1,7 @@
+autoDiscovery:
+  clusterName: # eks cluster name
+ 
+ rbac:
+  serviceAccount:
+    annotations:
+      eks.amazonaws.com/role-arn: # iam role arn
