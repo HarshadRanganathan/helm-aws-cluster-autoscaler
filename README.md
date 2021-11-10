@@ -49,6 +49,20 @@ This trust relationship allows pods with serviceaccount `cluster-autoscaler` in 
 }
 ```
 
+### Config Updates
+
+1. Update `stages/prod/prod-values.yaml` file with EKS cluster and IAM Role ARN.
+
+```yaml
+autoDiscovery:
+  clusterName: # eks cluster name
+ 
+ rbac:
+  serviceAccount:
+    annotations:
+      eks.amazonaws.com/role-arn: # iam role arn
+```
+
 ## Install/Upgrade Chart
 
 Run below helm command to install/upgrade the helm chart by providing shared and stage specific values.
