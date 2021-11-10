@@ -9,10 +9,20 @@ Table of Contents
 
    * [helm-aws-cluster-autoscaler](#helm-aws-cluster-autoscaler)
       * [Pre-requisites](#pre-requisites)
+         * [Tags](#tags)
          * [IAM](#iam)
       * [Install/Upgrade Chart](#installupgrade-chart)
 
 ## Pre-requisites
+
+### Tags
+
+ASGs need to be tagged with the following tags so that the cluster autoscaler can auto-discover them.
+
+```
+k8s.io/cluster-autoscaler/enabled                        = "TRUE"
+k8s.io/cluster-autoscaler/<cluster-name>                 = "owned"
+```
 
 ### IAM
 
